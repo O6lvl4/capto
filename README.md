@@ -1,88 +1,88 @@
 # ✨ Capto
 
-> スタイリッシュなディレクトリスナップショットをPDFで生成するツール
+> A stylish tool for generating directory snapshots as PDFs.
 
-Captoはディレクトリ構造とファイル内容を美しいPDFドキュメントにキャプチャします。テキストファイルだけでなく画像ファイルも表示可能で、`.gitignore` ルールを尊重し、バイナリファイルを自動的に検出します。マルチモーダルLLMで読み込むのに最適な形式で出力します。
+Capto captures the structure of directories and the content of files into a beautiful PDF document. It displays not only text files but also image files, respects `.gitignore` rules, and automatically detects binary files. The output is in a format optimized for multi-modal LLM consumption.
 
-## 📦 インストール
+## 📦 Installation
 
-npmを使ってグローバルにインストール:
+Install globally using npm:
 
 ```bash
 npm install -g capto
 ```
 
-または、インストールせずに一時的に使用:
+Alternatively, use it temporarily without installation:
 
 ```bash
-npx capto <ディレクトリ>
+npx capto <directory>
 ```
 
-## 🚀 使い方
+## 🚀 Usage
 
-### 基本的な使い方
+### Basic Usage
 
-トップレベルのファイルのみを処理:
+Process only the top-level files:
 
 ```bash
 capto ./my-project -o snapshot.pdf
 ```
 
-再帰的にサブディレクトリを含めて処理:
+Recursively process including subdirectories:
 
 ```bash
 capto ./my-project -r -o snapshot.pdf
 ```
 
-### その他の例
+### Other Examples
 
-追加の無視パターンを指定:
+Specify additional ignore patterns:
 
 ```bash
 capto ./my-project -i '*.log' '*.tmp' -o snapshot.pdf
 ```
 
-フォントサイズとタイトルを指定:
+Specify font size and title:
 
 ```bash
 capto ./my-project -f 12 -t "Project Snapshot" -o snapshot.pdf
 ```
 
-## 🎯 機能
+## 🎯 Features
 
-- エレガントなディレクトリツリー表示
-- テキストファイル内容を行番号付きで表示
-- 画像ファイルをPDF内に直接表示
-- 再帰的または非再帰的なスキャンモード
-- `.gitignore` ルールの自動適用
-- バイナリファイルの自動検出
-- 様々なテキストエンコーディングに対応
-- マルチモーダルLLMでの解析に最適化
-- カスタマイズ可能なPDFデザイン
+- Elegant directory tree display
+- Displays text file content with line numbers
+- Directly shows image files within the PDF
+- Recursive or non-recursive scan mode
+- Automatic application of `.gitignore` rules
+- Automatic detection of binary files
+- Supports various text encodings
+- Optimized for analysis by multi-modal LLMs
+- Customizable PDF design
 
-## 🛠️ コマンドラインオプション
+## 🛠️ Command Line Options
 
 ```bash
-使用方法: capto <ディレクトリ> [オプション]
+Usage: capto <directory> [options]
 
-引数:
-  directory              対象ディレクトリ
+Arguments:
+  directory              Target directory
 
-オプション:
-  -o, --output <file>    出力PDFファイル名 (デフォルト: "snapshot.pdf")
-  -i, --ignore <patterns...>  追加の無視パターン
-  -f, --fontsize <size>  フォントサイズ (デフォルト: "10")
-  -t, --title <title>    PDFのタイトル (デフォルト: "Directory Snapshot")
-  -r, --recursive        サブディレクトリを再帰的に処理する
-  -V, --version          バージョン情報を表示
-  -h, --help             ヘルプを表示
+Options:
+  -o, --output <file>    Output PDF file name (default: "snapshot.pdf")
+  -i, --ignore <patterns...>  Additional ignore patterns
+  -f, --fontsize <size>  Font size (default: "10")
+  -t, --title <title>    PDF title (default: "Directory Snapshot")
+  -r, --recursive        Process subdirectories recursively
+  -V, --version          Display version information
+  -h, --help             Display help
 ```
 
-## ⚙️ 開発方法
+## ⚙️ Development Setup
 
-### ローカルでのセットアップ
+### Local Setup
 
-リポジトリをクローンして依存関係をインストール:
+Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/yourusername/capto.git
@@ -92,12 +92,12 @@ npm run build
 npm link
 ```
 
-### ローカル実行
+### Run Locally
 
 ```bash
-npm start -- <ディレクトリ> [オプション]
+npm start -- <directory> [options]
 ```
 
-## 📄 ライセンス
+## 📄 License
 
 MIT License
