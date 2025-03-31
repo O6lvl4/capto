@@ -1,7 +1,7 @@
 {
   "name": "capto",
-  "version": "2.0.0",
-  "description": "ディレクトリ構造とファイル内容をスタイリッシュなPDFに変換するツール（日本語対応版）",
+  "version": "1.0.0",
+  "description": "The tool that converts directory structures and file contents into a stylish PDF (Japanese version available).",
   "main": "dist/index.js",
   "bin": {
     "capto": "dist/index.js"
