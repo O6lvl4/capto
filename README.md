@@ -1,4 +1,4 @@
-# ✨ Capto
+<img src="./docs/logo-capto.png" width="40%" min-width="200px" alt="CaptoLogo"/>
 
 > A stylish tool for generating directory snapshots as PDFs.
 
